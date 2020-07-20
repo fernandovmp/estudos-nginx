@@ -1,0 +1,5 @@
+FROM nginx
+RUN mkdir /data
+COPY . /data
+COPY config/nginx.conf /etc/nginx
+EXPOSE 80

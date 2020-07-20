@@ -1,0 +1,8 @@
+FROM nginx
+RUN mkdir /data && \
+    mkdir /data/www && \
+    mkdir /data/images
+COPY index.html /data/www
+COPY images/* /data/images
+COPY config/nginx.conf /etc/nginx
+EXPOSE 80
