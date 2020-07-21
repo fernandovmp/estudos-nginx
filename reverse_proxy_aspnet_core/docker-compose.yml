@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    api:
+        build:
+            context: WebApi
+    webpage:
+        build:
+            context: wwwroot
+    reverse-proxy:
+        build:
+            context: nginx
+        ports:
+            - '8080:80'
